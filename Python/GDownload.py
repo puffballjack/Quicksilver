@@ -1,8 +1,8 @@
 #!/usr/local/bin/env python3
 from urllib.parse import urlparse
 import sys
-sys.path.append('/Users/mac/Library/Application Support/Quicksilver/Python/pyperclip-1.5.27')
-import pyperclip
+#sys.path.append('/pyperclip-1.5.27')
+from pyperclip import pyperclip
 #url = "https://drive.google.com/file/d/0B0HSZQ6LzpOQRlgwckxvNlNubFU/view?usp=sharing"
 url = sys.argv[1]
 parsed = urlparse(url)
@@ -19,5 +19,7 @@ else:
 	url = 'https://drive.google.com/uc?export=download&id=' + pathlist[2]
 
 pyperclip.copy(url)
+
+#print(url)
 
 quit()
